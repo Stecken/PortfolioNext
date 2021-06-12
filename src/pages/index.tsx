@@ -89,7 +89,7 @@ export default function Home(props: UserProps) {
         
         <section className={styles.conteudo}>
           <div>
-            <video className={styles.VideoBackground} width="320" height="240" autoPlay loop="loop">
+            <video className={styles.VideoBackground} autoPlay loop>
               <source src="/static/programando.mp4" type="video/mp4" />
             </video>
             <div>
