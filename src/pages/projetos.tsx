@@ -16,7 +16,7 @@ export default function Projetos(props: UserProps) {
                 <title>Projetos | MoveWe</title>
             </Head>
             <section className={styles.conteudo}>
-                <h3><p>(() => {"{"} let page = </p>"Projetos" <p>{"}"})()</p></h3>
+                <h3><p>(() {'=>'} {"{"} let page = </p>"Projetos" <p>{"}"})()</p></h3>
                 <div className={styles.englobaCards}>
                     <div>
                         <div className={styles.card} data-effect="zoom">
