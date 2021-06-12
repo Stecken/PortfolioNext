@@ -1,0 +1,17 @@
+.englobaError {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+.englobaError > h1 {
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.englobaError > img {
+    height: 90vh;
+}

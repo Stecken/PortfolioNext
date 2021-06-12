@@ -1,0 +1,173 @@
+.container {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color:#102027;
+    color: #fff;
+    transition: all .25s ease;
+}
+
+.container div {
+    display: flex;
+}
+
+.container > nav {
+    display: flex;
+}
+
+
+.nameTitle {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+.titleNavbar {
+    font-family: 'Prompt', sans-serif;
+}
+
+.englobaRedes {
+    padding-left: 3rem;
+}
+
+.englobaRedes > a {
+    padding-left: 0.4rem;
+}
+
+
+.navbarPC {
+    display: flex;
+}
+
+.navbarPC > div {
+    display: flex;
+    align-items: center;
+}
+
+.navbarPC > div > a {
+    display: flex;
+    align-items: center;
+}
+
+.navbarPC > div > a > h4 {
+    padding: 0 1rem;
+    font: 400 1rem "Inter", sans-serif;
+}
+
+.underline {
+   text-decoration: none; 
+   position: relative; 
+}   
+
+.underline:after {
+    position: absolute;
+    transition: bottom .25s ease 0s; /* only transition top property */
+    height: 3px;
+    margin: 0 auto;
+    content: '';
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #000;
+    background-color: red;
+    left: 0;
+    bottom: -0.9rem; /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+}
+
+.linkHeaderAtivado:after {
+    bottom: -1.9rem !important;
+}
+
+.linkHeaderDesativado {
+    opacity: .7;
+    transition: opacity .25s linear;
+}
+
+.linkHeaderDesativado:hover {
+    opacity: 1;
+}
+
+.redesSociais {
+    margin-left: 1rem;
+}
+
+.iconeGit {
+    font-size: 1rem;
+}
+
+.buttonMobile {
+   font-size: 2em; 
+   cursor: pointer;
+}
+
+.navbarMobile {
+    display: none !important;
+    z-index: 9;
+}
+
+.navbarMobile > nav {
+    z-index: 3;
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    flex-direction: column;
+    background-color: #112c3a;
+    transition: transform .75s ease-in-out;
+    transform:translateX(+13rem);
+}
+
+.menuActive {
+    transform:translateX(-0rem) !important;
+}
+
+.navbarMobile > nav > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 1.7rem 0;
+    padding-left: 1.7rem;
+    padding-right: 2.7rem;
+}
+
+.navbarMobile > nav > a:hover {
+    background-color:#213d49;
+}
+
+.navbarMobile > nav > a > h4 {
+    padding-left: 0.6rem;
+    font: 400 1.3rem "Inter", sans-serif;
+}
+
+.linkMobileActive {
+    border-left: 6px solid #56A416;
+    border-radius: 2px 0px 0px 2px;
+}
+
+@media(max-width: 1800px) {
+    
+}
+
+@media(max-width: 750px) {
+    .navbarPC {
+        display: none !important;
+    }
+    .navbarMobile {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .buttonMobile {
+        display: block !important;
+    }
+}
+
+@media(max-width: 470px) {
+    
+}

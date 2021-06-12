@@ -1,0 +1,23 @@
+.Completa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    background-color: #171822;
+}
+
+.Completa > h3 {
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+
+.Completa > div > a {
+    margin: 0 1rem;
+}
+
+.Icone {
+    width: 1.4rem;
+    height: 1.4rem;
+}

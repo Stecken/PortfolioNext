@@ -1,0 +1,250 @@
+.container {
+    padding-top: 10rem;
+    background-color:#232833;
+    display: flex;
+    flex-direction: column;
+}
+
+.VideoBackground {
+    z-index: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 50rem;
+    -o-filter: blur(10px);
+    filter: blur(10px);
+    object-fit: cover;
+    object-position: -2rem 10%;
+}
+
+.conteudo > div > div {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Name {
+    display: flex;
+    flex-direction: row !important;
+    font-size: 1.7rem;
+}
+
+.Name > p {
+    text-shadow: 2px 0px 3px #180B07;
+    color:rgb(176, 133, 216);
+    animation: opacityEffect 3.5s ease-out both 1s, bottomToTop 3s linear both 1s; 
+}
+
+.conteudo > div > div > h3 {
+    text-shadow: 2px 0px 3px #180B07;
+    z-index: 0 !important;
+    display: flex;
+    padding: 1rem 0;
+    color: white;
+    opacity: 0;
+    animation: opacityEffect 3.5s ease-out both 1s, bottomToTop 3s linear both 1s; 
+}
+
+.Habilities {
+    font-size: 1.5rem;
+    animation: opacityEffect 3.5s ease-out both 1s, bottomToTop 3s linear both 1s; 
+}
+
+.Habilities > h4 {
+    color:rgb(208, 223, 255);
+}
+
+.Habilities > h5 {
+    display: flex;
+    color:rgb(4, 238, 168);
+}
+
+.Habilities > h5 > p {
+    color:coral;
+}
+
+.RedesSociais {
+    display: flex;
+    z-index: 1;
+    flex-direction: row !important;
+}
+
+.RedesSociais > a {
+    z-index: 1;
+    margin: 2rem;
+}
+
+.Icone {
+    z-index: 1;
+    transition: color 0.25s linear;
+    width: 2rem;
+    height: 2rem;
+}
+
+.Icone:hover {
+    color: white;
+}
+
+.LogoCenter {
+    z-index: 1;
+    max-width: 60% !important;
+    height: auto !important;
+}
+
+.LogoCenter path {
+    fill: transparent;
+}
+
+.LogoCenter path:nth-child(1) {
+    animation: fill 1.4s linear forwards 0.4s; 
+}
+
+.LogoCenter path:nth-child(2) {
+    animation: fill 1.4s linear forwards 0.8s; 
+}
+
+.LogoCenter path:nth-child(3) {
+    animation: fill 1.4s linear forwards 1.2s;  
+}
+
+.LogoCenter path:nth-child(4) {
+    animation: fill 1.4s linear forwards 1.6s;  
+}
+
+.LogoCenter path:nth-child(5) {
+    animation: fill 1.4s linear forwards 2.0s; 
+}
+
+.LogoCenter path:nth-child(6) {
+    animation: fill 1.4s linear forwards 2.4s; 
+}
+
+.LogoCenter path:nth-child(7) {
+    animation: fill 1.4s linear forwards 2.8s; 
+}
+
+.LogoCenter path:nth-child(8) {
+    animation: fill 1.4s linear forwards 3s; 
+}
+
+.englobaDev {
+    display: flex;
+    position:sticky;
+    flex-direction: column;
+    z-index: 1 !important;
+}
+
+.englobaDev > div {
+    width: 100%;
+    z-index: 1 !important;
+}
+
+.DevText {
+    padding-top: 4rem;
+}
+
+.boxTop {
+    width: 100%;
+    border-top: 70px solid transparent;
+    border-right: 94vw solid #2A2F3D;
+}
+
+.boxBot {
+    width: 100%;
+    border-bottom: 70px solid transparent;
+    border-left: 94vw solid #2A2F3D;
+}
+
+.boxTopModifi {
+    border-bottom: 70px solid #171822;
+    border-right: 94vw solid #E23638;
+}
+
+.boxBotModifi {
+    border-bottom: 70px solid #E23638;
+}
+
+
+
+.DevText {
+    width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A2F3D;
+    flex-wrap: wrap;
+}
+
+.DevText > img {
+    filter: invert(1);
+    transition: filter .5s linear;
+}
+
+.DevText > img:hover {
+    filter: invert(1) drop-shadow(0 0 0.25rem rgb(12, 10, 11));
+}
+
+.DevText > h4 {
+    text-align: center;
+    padding-right: 3rem;
+    font-size: 3rem;
+    color: white;
+}
+
+@media(max-width: 550px) {
+    .VideoBackground {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        height: 70%;
+    }
+
+    .DevText > h4 {
+        padding-right: 0rem;
+        padding: 0 !important;
+    }
+
+    .DevText > img {
+        width: 15rem;
+        height: 15rem;
+    }
+} 
+
+@keyframes opacityEffect {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bottomToTop {
+    to {
+        transform: translateY(0rem);
+    }
+    from {
+        transform: translateY(+1rem);
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: white;
+    }
+}
