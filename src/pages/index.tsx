@@ -5,6 +5,8 @@ import { ChallengesProvider } from '../contexts/ChallengesContext';
 import Head from "next/head"
 import { GetServerSideProps } from "next";
 
+import anime from 'animejs';
+
 import { FaGithub, FaLinkedin, FaFacebookSquare, FaHandHoldingUsd, FaPaypal } from 'react-icons/fa';
 
 import styles from '../styles/pages/Home.module.css';
