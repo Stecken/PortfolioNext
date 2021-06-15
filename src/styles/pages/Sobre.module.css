@@ -1,0 +1,104 @@
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+    background-color:rgb(23, 43, 73);
+}
+
+.bio {
+    display: flex;
+}
+
+.englobaFoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(25, 24, 88);
+    width: 35%;
+}
+
+.englobaText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(27, 30, 48);
+    color:aliceblue;
+    width: 65%;
+    height: 20rem;
+}
+
+.englobaFoto > img {
+    width: 10rem;
+    height: auto;
+    max-height: 10rem;
+    border: 2px solid #1ca455;
+    border-radius: 22px;
+    transition: all 1s;
+}
+
+.englobaFoto > img:hover, .englobaFoto > img:active {
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    transform: scale(1.1, 1.1);
+}
+
+.englobaText > h3 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    align-self: flex-start;
+}
+
+.englobaText > p {
+    font-size: 0.9rem;
+    padding: 0 4rem;
+}
+
+.NormalMode {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.englobaMode {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+}
+
+.englobaMode > span {
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.Skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.Skills > h2 {
+    color: white;
+}
+
+.Skills > div {
+    min-height: 15rem;
+}
+
+@media(max-width: 550px) {
+    .englobaText > p {
+        font-size: 0.9rem;
+        padding: 0 2rem;
+    }
+    .englobaText > h3 {
+        font-size: 1.7rem;
+        padding-bottom: 1.5rem;
+        padding-left: 2rem;
+        align-self: flex-start;
+    }
+} 

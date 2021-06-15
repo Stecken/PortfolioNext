@@ -1,0 +1,100 @@
+.Terminal {
+    font-family: "VT323", monospace;
+    display: flex;
+    padding: 0 2rem;
+    min-height: 800px;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+
+.Terminal > h1 { 
+    font-size: 3rem;
+}
+
+.TerminalTextGreen {
+    color: #34fc47;
+}
+
+.Terminal > p {
+    font-size: 1.5rem;
+}
+
+.Terminal > div {
+    font-size: 1.5rem;
+}
+
+.englobaConsole {
+    display: flex;
+}
+
+.contentOutput {
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+}
+
+.englobaOutput {
+    padding-left: 1rem;
+}
+
+.Input {
+    margin-left: 0.5rem;
+    font-family: "VT323", monospace;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: white;
+    width: 20px;
+    min-width: 10px;
+    caret-color: transparent;
+    border: none !important;
+    resize: horizontal;
+}
+
+.Input:focus-visible {
+    border: none !important;
+}
+
+.Input:active, .Input:focus{
+    border: none !important;
+    outline: none;
+}
+
+.englobaConsole:not([disabled])::after {
+    z-index: 3;
+  content: '_';
+  margin-left: 0.2em;
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+}
+
+/* Cursor animation */
+
+@-webkit-keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+
+.englobaInputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.englobaOutput {
+    display: flex;
+}
+
+.typeDir {
+    color: rgb(0, 225, 255);
+}
+
+.typeFile {
+    color: rgb(136, 255, 0);
+}

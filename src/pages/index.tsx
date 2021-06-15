@@ -20,6 +20,8 @@ export default function Home(props: UserProps) {
   const [numberClick, setNumberClick] = useState(0);
   const [textClick, setTextClick] = useState(["mov\xa0", "\"Yuri Martins\"", ", edx"]);
 
+  
+
   const animLogo = () => {
     if (typeof window !== "undefined") {
       let myPath = anime.path('svg#logo path');
@@ -37,6 +39,10 @@ export default function Home(props: UserProps) {
       
     }
   }
+
+  useEffect(function onFirstMount() {
+    animLogo();
+  }, []); // onLoad
 
   useEffect(() => { 
     if (numberClick >= 5) {
@@ -70,13 +76,10 @@ export default function Home(props: UserProps) {
   }
 
   if (typeof window !== "undefined") {
-    window.addEventListener("load", (event) => {
-      animLogo();
-    });
-    useEffect(() => {
-      animLogo();
-    }, [window.location.pathname]);
+    
   }
+
+  
 
   return (
     <ChallengesProvider 
