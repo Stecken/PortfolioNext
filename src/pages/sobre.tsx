@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 
 import Head from "next/head"
 
 import { HeaderPages } from '../components/HeaderPages';
 
+import { ModeContext, ModeProvider } from "../contexts/ModeContext";
+
 import styles from '../styles/pages/Sobre.module.css';
 
 import Switch from "react-switch";
 import { Terminal } from '../components/Terminal';
+import { GetServerSideProps } from 'next';
 
 interface UserProps {
-    theme: number;
+    mode: Boolean;
 }
 
 export default function Sobre(props: UserProps) {
-    const [ mode, setMode] = useState(false);
-    const onChangeMode = () => {
-        setMode(!mode);
-    }
+    const { mode, AlternarMode } = useContext(ModeContext);
 
     return (
         <div className={styles.container}>
@@ -49,7 +49,7 @@ export default function Sobre(props: UserProps) {
                 <Terminal mode={mode} />
                 <div className={styles.englobaMode}>
                     <span>Escolha o modo</span>
-                    <Switch onChange={onChangeMode} checked={mode} />
+                    <Switch onChange={AlternarMode} checked={Boolean(mode)} />
                 </div>
             </section>
         </div>

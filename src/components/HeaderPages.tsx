@@ -16,7 +16,6 @@ export function HeaderPages(...props) {
     const onChangeURLUnico = () => {
         if (unicaVez != true) {
             setUnicaVez(true);
-            console.log(pathState);
             if (window.location.pathname == "/") {
                 setPathState("/");
             }

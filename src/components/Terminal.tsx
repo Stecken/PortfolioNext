@@ -5,7 +5,7 @@ import ReactDOMServer from 'react-dom/server';
 import $ from 'jquery';
 
 interface TerminalProps {
-    mode: boolean;
+    mode: Boolean;
 }
 
 
@@ -27,6 +27,10 @@ export function Terminal({ ...props }: TerminalProps) {
         }
     }
 
+    useEffect(() => {
+        buildNewInput();
+    }, []);
+
     const onKeyPressConsole = (id) => {
         let inPutVal = $(`#inputConsole${id}`).val();
         let inPut = $(`#inputConsole${id}`);
@@ -43,13 +47,17 @@ export function Terminal({ ...props }: TerminalProps) {
         }
     }
 
+    const clearTerminal = () => {
+        $('#terminal')                     //Select the object
+            .children()             //Select all the children of the parent
+            .not(':nth-last-child(0n+1)')    //Unselect the first child
+            .remove();              //Remove
+    }
+
     useEffect(() => {
         if (idInput != 1) {
             if (idInput % 10 === 0) {
-                $('#terminal')                     //Select the object
-                    .children()             //Select all the children of the parent
-                    .not(':nth-last-child(0n+1)')    //Unselect the first child
-                    .remove();              //Remove
+                clearTerminal();
             }
                 tratamentoConsole($(`#inputConsole${idInput - 1}`).val());
                 $(`#inputConsole${idInput - 1}`).prop("disabled", true);
@@ -159,6 +167,10 @@ export function Terminal({ ...props }: TerminalProps) {
                 (document.getElementById('audio') as HTMLAudioElement).pause();
             }, 30000)
         }
+        else if (command == "clear") {
+            clearTerminal();
+            buildNewInput();
+        }
         else if (commandArray[0] == "cat") {
             if (!(commandArray.length < 2 || commandArray.length > 2)) {
                 let therePath = false;
@@ -179,7 +191,6 @@ export function Terminal({ ...props }: TerminalProps) {
                         file = "abstract.txt";
                     }
                 }
-                console.log(path, file);
                 if (!therePath) {
                     const htmlString = ReactDOMServer.renderToStaticMarkup(
                         <div>Arquivo inexistente</div>
@@ -215,11 +226,6 @@ export function Terminal({ ...props }: TerminalProps) {
             <h1>Terminal</h1>
             <p>Terminal interativo, caso seja sua primeira vez, digite "help"</p>
             <div id="terminal" className={styles.englobaInputs}>
-                <div className={styles.englobaConsole}>
-                    <div className={styles.TerminalTextGreen}>[Stecken@localhost]:{path}#</div>
-                    <input spellCheck={false} id={`inputConsole1`} onKeyUp={(event) => { detectEnterConsole(event) }} className={styles.Input} onKeyPress={() => { onKeyPressConsole(idInput) }} />
-                </div>
-                <div id="console-output1" className={styles.englobaOutput}></div>
             </div>
             <audio id="audio" src="/static/rato.mp3" />
         </div>

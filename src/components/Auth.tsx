@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import styles from '../styles/components/Auth.module.css';
 import { FaGithub } from 'react-icons/fa'
-import { AuthContext } from '../contexts/AuthContext';
+import { AuthContext } from '../contexts/ModeContext';
 import { ChallengesContext } from '../contexts/ChallengesContext';
 
 export function Auth() {
