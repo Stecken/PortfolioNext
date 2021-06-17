@@ -23,9 +23,7 @@ export function ModeProvider({ children }: IModeContextProps) {
     async function loadModeCookie(): Promise<void> {
         const modeC = Cookies.get('mode');
         if (typeof (modeC) !== 'undefined') {
-            console.log("dentro dos cookies", modeC);
             const modeParams = modeC ?? false as Boolean;
-            console.log("ModeParams:", modeParams, typeof modeParams);
             setMode(Boolean(modeParams));
         }
         else {
@@ -40,8 +38,6 @@ export function ModeProvider({ children }: IModeContextProps) {
 
     useEffect(() => {
         if (mode == true) {
-            console.log('\ncontV:', contV);
-            console.log('setando cookie', mode);
             Cookies.set('mode', String(mode));
         }
         else {

@@ -28,7 +28,7 @@ export function Terminal({ ...props }: TerminalProps) {
     }
 
     useEffect(() => {
-        buildNewInput();
+        buildNewInput();     
     }, []);
 
     const onKeyDownConsole = (id) => {
@@ -110,6 +110,7 @@ export function Terminal({ ...props }: TerminalProps) {
         if (command == undefined) {
             command = "nada nada";
         }
+        command = command.toLowerCase();
         let commandArray = command.split(" ");
         
         if (command == "ls -l") {
@@ -174,6 +175,57 @@ export function Terminal({ ...props }: TerminalProps) {
                 (document.getElementById('audioluna') as HTMLAudioElement).pause();
             }, 50000)
         }
+        else if (command == "discord") {
+            (document.getElementById('audiodiscord') as HTMLAudioElement).play();
+            buildNewInput();
+            setTimeout(() => {
+                (document.getElementById('audiodiscord') as HTMLAudioElement).pause();
+            }, 10000)
+        }
+        else if (command == "what") {
+            const htmlString = ReactDOMServer.renderToStaticMarkup(
+                <div>What?</div>
+            );
+            $(`#console-output${idInput - 1}`).append(htmlString);
+            (document.getElementById('audiowhat') as HTMLAudioElement).play();
+            buildNewInput();
+        }
+        else if (command == "help" || command == "ajuda") {
+            const htmlString = ReactDOMServer.renderToStaticMarkup(
+                <div className={styles.englobaHelp}>
+                    <div>Comandos</div>
+                    <div className={styles.englobaCommands}>
+                        <div>
+                            <h3>cd <p className={styles.argumentCommand}>{"{"}diretório{"}"}</p></h3>
+                            <h4 className={styles.DesCommand}>Troca de diretório</h4>
+                        </div>
+                        <div>
+                            <h3>ls <p className={styles.argumentCommand}>-l</p></h3>
+                            <h4 className={styles.DesCommand}>Vê os arquivos no diretório</h4>
+                        </div>
+                        <div>
+                            <h3>cat <p className={styles.argumentCommand}>{"{"}Nome completo do arquivo{"}"}</p></h3>
+                            <h4 className={styles.DesCommand}>Abre os arquivos de texto e imagens dos diretórios</h4>
+                        </div>
+                        <div>
+                            <h3>clear</h3>
+                            <h4 className={styles.DesCommand}>Limpa o Terminal</h4>
+                        </div>
+                        <div>
+                            <h3>discord</h3>
+                            <h4 className={styles.DesCommand}>Descubra</h4>
+                        </div>
+                        <div>
+                            <h3>what</h3>
+                            <h4 className={styles.DesCommand}>Descubra</h4>
+                        </div>
+                        Há comandos secretos
+                    </div>
+                </div>
+            );
+            $(`#console-output${idInput - 1}`).append(htmlString);
+            buildNewInput();
+        }
         else if (command == "clear") {
             clearTerminal();
             buildNewInput();
@@ -236,6 +288,8 @@ export function Terminal({ ...props }: TerminalProps) {
             </div>
             <audio id="audio" src="/static/rato.mp3" />
             <audio id="audioluna" src="/static/soyluna.mp3" />
+            <audio id="audiowhat" src="/static/what_sound.mp3" />
+            <audio id="audiodiscord" src="/static/discord.mp3" />
         </div>
     );
 }

@@ -39,6 +39,36 @@
     padding-left: 1rem;
 }
 
+.englobaHelp {
+    display: flex;
+    flex-direction: column;
+}
+
+.englobaCommands {
+    display: flex;
+    flex-direction: column;
+}
+
+.englobaCommands > div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.englobaCommands > div > h3 {
+    display: flex;
+    color:cornflowerblue;
+}
+
+.englobaCommands > div > h3 > p {
+    padding-left: 1rem;
+    color:#34fc47;
+}
+
+.DesCommand {
+    color:coral;
+}
+
 .Input {
     margin-left: 0.5rem;
     font-family: "VT323", monospace;
@@ -62,7 +92,7 @@
 }
 
 .englobaConsole:not([disabled])::after {
-    z-index: 3;
+    z-index: 1;
   content: '_';
   margin-left: 0.2em;
   -webkit-animation: blink 1s infinite;
