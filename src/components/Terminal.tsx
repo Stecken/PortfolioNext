@@ -31,7 +31,7 @@ export function Terminal({ ...props }: TerminalProps) {
         buildNewInput();
     }, []);
 
-    const onKeyPressConsole = (id) => {
+    const onKeyDownConsole = (id) => {
         let inPutVal = $(`#inputConsole${id}`).val();
         let inPut = $(`#inputConsole${id}`);
         inPut.css('width', (((inPutVal.length) + 1) * 10) + 'px');
@@ -68,8 +68,8 @@ export function Terminal({ ...props }: TerminalProps) {
                     oldInput.removeEventListener('keyup', (event) => {
                         detectEnterConsole(event);
                     });
-                    oldInput.removeEventListener('keypress', () => {
-                        onKeyPressConsole(idInput);
+                    oldInput.removeEventListener('keydown', () => {
+                        onKeyDownConsole(idInput);
                     });
                 }
                 catch(e) {
@@ -95,8 +95,8 @@ export function Terminal({ ...props }: TerminalProps) {
         newInput.addEventListener('keyup', (event) => {
             detectEnterConsole(event);
         });
-        newInput.addEventListener('keypress', () => {
-            onKeyPressConsole(idInput);
+        newInput.addEventListener('keydown', () => {
+            onKeyDownConsole(idInput);
         });
     }
 
@@ -167,6 +167,13 @@ export function Terminal({ ...props }: TerminalProps) {
                 (document.getElementById('audio') as HTMLAudioElement).pause();
             }, 30000)
         }
+        else if (command == "duda") {
+            (document.getElementById('audioluna') as HTMLAudioElement).play();
+            buildNewInput();
+            setTimeout(() => {
+                (document.getElementById('audioluna') as HTMLAudioElement).pause();
+            }, 50000)
+        }
         else if (command == "clear") {
             clearTerminal();
             buildNewInput();
@@ -228,6 +235,7 @@ export function Terminal({ ...props }: TerminalProps) {
             <div id="terminal" className={styles.englobaInputs}>
             </div>
             <audio id="audio" src="/static/rato.mp3" />
+            <audio id="audioluna" src="/static/soyluna.mp3" />
         </div>
     );
 }

@@ -40,9 +40,36 @@ export default function Sobre(props: UserProps) {
                         </div>
                     </div>
                     <div className={styles.Skills}>
-                        <h2>Habilidades</h2>
+                        <h2>Tecnologias</h2>
                         <div>
-                            <div></div>
+                            <div>
+                                <h4>Tenho Experiência</h4>
+                                <div>
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/c.svg" alt="C" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/javascript.svg" alt="JS" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/python.svg" alt="Python" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/php.svg" alt="Python" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/reactjs.svg" alt="Python" />
+                                </div>
+                            </div>
+                            <div>
+                                <h4>Estou Estudando</h4>
+                                <div>
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/php.svg" alt="Python" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/reactjs.svg" alt="Python" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/javascript.svg" alt="JS" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/typescript.svg" alt="JS" />
+                                </div>
+                            </div>
+                            <div>
+                                <h4>Tenho Experiência</h4>
+                                <div>
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/c.svg" alt="C" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/cplusplus.svg" alt="C++" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/javascript.svg" alt="JS" />
+                                    <img src="https://xesque.rocketseat.dev/platform/tech/python.svg" alt="Python" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
