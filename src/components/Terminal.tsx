@@ -132,6 +132,7 @@ export function Terminal({ ...props }: TerminalProps) {
                 if (path == '~/') {
                     if (commandArray[1] == "/"){
                         therePath = true;
+                        buildNewInput();
                     }
                     else if (commandArray[1] == "bio") {
                         therePath = true;

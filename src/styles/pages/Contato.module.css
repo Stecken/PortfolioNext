@@ -1,0 +1,97 @@
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+    min-height: 600px;
+    background-color:#2A2F3D;
+}
+
+.TitlePage {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.TitlePage > h3 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 1px 2px 3px #669;
+}
+
+.TitlePageIcon {
+    color: blueviolet;
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.contatos {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.cardPerson {
+    margin: 3rem 3rem;
+    display: flex;
+    align-self: center;
+    border-radius: 20px;
+    background-color:#393f52;
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 3px 3px 7px 0px rgba(105, 105, 105, 0.5);
+}
+
+.cardPerson > div {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.englobaNamePerson {
+    display: flex;
+    flex-direction: column;
+}
+
+.englobaNamePerson > h4 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.englobaNamePerson > h5 {
+    color: rgb(36, 224, 152);
+}
+
+.redesSociaisPerson {
+    display: flex;
+    padding-top: 2rem;
+}
+
+.Icone {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 1rem;
+    transition: color 0.4s linear;
+    color: rgb(182, 182, 182);
+}
+
+.Icone:hover, .Icone:active {
+    color: rgb(82, 121, 248);
+}
+
+@media(max-width: 550px) {
+    .contatos {
+        flex-direction: column;
+    }
+    .englobaNamePerson > h5 {
+        font-size: 1rem;
+    }
+    .cardPerson > div {
+        padding: 2rem;
+    }
+    .cardPerson {
+        margin: 3rem 0;
+    }
+}
