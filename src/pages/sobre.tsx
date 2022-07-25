@@ -29,13 +29,20 @@ export default function Sobre(props: UserProps) {
                 <div className={styles.NormalMode} style={{ display: mode == false ? 'flex' : 'none'}}>
                     <div className={styles.bio}>
                         <div className={styles.englobaFoto}>
-                            <img id="imageEu" src="/static/pp.jpg" alt="" />
+                            <img id="imageEu" src="/static/pp.jpeg" alt="" />
                         </div>
                         <div className={styles.englobaText}>
-                            <h3>Sobre mim</h3>
+                            <h3>Carreira</h3>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
-                                with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                Há quase 4 anos no ramo da computação, possuo experiência no desenvolvimento de aplicações web,
+                                através de HTML5; CSS3; JS(TypeScript, React, Next.js, Angular e Express) e PHP.
+                                Possuo experiência no desenvolvimento de embarcados, em microcontroladores AVR, através de Assembly 8 bit e C.
+                                Possuo experiência no desenvolvimento de aplicações desktop, com Electron(JS), e em C(Win32 API).
+                                Possuo experiência no desenvolvimento de aplicações mobile, com Ionic(Cordova e Angular) e React Native.
+                                Possuo experiência em testes automatizados, entre eles, TDD e E2E.
+                                Atualmente estou focado no desenvolvimento web, trabalhando em soluções de interface SPA.
+                                Nas horas vagas, possuo interesse no desenvolvimento de firmware para embarcados, sistema operacionais e aplicações de baixo nível.
+                                #DontStopLearning. 
                             </p>
                         </div>
                     </div>
@@ -62,7 +69,7 @@ export default function Sobre(props: UserProps) {
                                 </div>
                             </div>
                             <div>
-                                <h4>Tenho Experiência</h4>
+                                <h4>Tenho Interesse</h4>
                                 <div>
                                     <img src="https://xesque.rocketseat.dev/platform/tech/c.svg" alt="C" />
                                     <img src="https://xesque.rocketseat.dev/platform/tech/cplusplus.svg" alt="C++" />

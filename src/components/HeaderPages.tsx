@@ -47,10 +47,11 @@ export function HeaderPages(...props) {
     }
 
     const hookScrool = () => {
-        if (window.pageYOffset === 0 && window.pageYOffset <= 29) {
+        console.log("scroll", window.pageYOffset)
+        if (window.pageYOffset <= 150) {
             setMarginStyle(true);
         }
-        else if (window.pageYOffset >= 30) {
+        else if (window.pageYOffset >= 151) {
             setMarginStyle(false);
         }
     }

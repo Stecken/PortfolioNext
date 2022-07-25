@@ -21,12 +21,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/components/AuthFunction.tsx"  ],
+    "**/*.tsx",
+    "src/components/AuthFunction.tsx"
+  ],
   "exclude": [
     "node_modules"
   ]

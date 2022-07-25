@@ -7,13 +7,16 @@
 
 .bio {
     display: flex;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .englobaFoto {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:rgb(25, 24, 88);
+    background-color:rgb(12, 11, 80);
+    background: rgb(16, 116, 117);
+    background: linear-gradient(60deg, rgb(14, 99, 99) 0%, rgb(27, 30, 48) 69%);
     width: 35%;
 }
 
@@ -29,11 +32,12 @@
 }
 
 .englobaFoto > img {
-    width: 10rem;
+    width: 12rem;
     height: auto;
-    max-height: 10rem;
-    border: 2px solid #1ca455;
-    border-radius: 22px;
+    max-height: 12rem;
+    border: 2px solid #07559e;
+    box-shadow: rgb(40, 46, 53) 0px 20px 30px -10px;
+    border-radius: 0.4rem;
     transition: all 1s;
 }
 
@@ -91,7 +95,7 @@
 .Skills > div {
     display: flex;
     width: 90%;
-    justify-content:space-between;
+    justify-content: space-evenly;
     align-items: center;
     min-height: 15rem;
 }

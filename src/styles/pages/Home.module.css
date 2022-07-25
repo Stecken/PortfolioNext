@@ -95,38 +95,50 @@
 
 .LogoCenter path {
     fill: transparent;
+    stroke-opacity: 0;
+    animation: strokeOpacity 1.4s linear forwards 0.4s;
 }
 
+@keyframes strokeOpacity {
+    from {
+        stroke-opacity: 0;
+    }
+    to {
+        stroke-opacity: 1;
+    }
+}
+
+
 .LogoCenter path:nth-child(1) {
-    animation: fill 1.4s linear forwards 0.4s; 
+    animation: fill 1.4s linear forwards 0s; 
 }
 
 .LogoCenter path:nth-child(2) {
-    animation: fill 1.4s linear forwards 0.8s; 
+    animation: fill 1.4s linear forwards 0.4s; 
 }
 
 .LogoCenter path:nth-child(3) {
-    animation: fill 1.4s linear forwards 1.2s;  
+    animation: fill 1.4s linear forwards 0.8s;  
 }
 
 .LogoCenter path:nth-child(4) {
-    animation: fill 1.4s linear forwards 1.6s;  
+    animation: fill 1.4s linear forwards 1.2s;  
 }
 
 .LogoCenter path:nth-child(5) {
-    animation: fill 1.4s linear forwards 2.0s; 
+    animation: fill 1.4s linear forwards 1.6s; 
 }
 
 .LogoCenter path:nth-child(6) {
-    animation: fill 1.4s linear forwards 2.4s; 
+    animation: fill 1.4s linear forwards 2.0s; 
 }
 
 .LogoCenter path:nth-child(7) {
-    animation: fill 1.4s linear forwards 2.8s; 
+    animation: fill 1.4s linear forwards 2.4s; 
 }
 
 .LogoCenter path:nth-child(8) {
-    animation: fill 1.4s linear forwards 3s; 
+    animation: fill 1.4s linear forwards 2.8s; 
 }
 
 .englobaDev {
@@ -246,5 +258,6 @@
     }
     to {
         fill: white;
+        
     }
 }
